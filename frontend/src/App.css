@@ -53,7 +53,7 @@ body {
 }
 
 .App-header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 0 0 6px var(--neon-purple), 0 0 20px var(--neon-purple-dim);

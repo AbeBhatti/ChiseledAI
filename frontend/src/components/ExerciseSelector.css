@@ -5,6 +5,7 @@
   }
   
   .exercise-selector {
+    transform: translateY(-80px);
     width: 100%;
     max-width: 1200px;
     animation: fadeIn 0.6s ease forwards;
@@ -22,6 +23,7 @@
   }
   
   .selector-content {
+    transform: translateY(-80px);
     text-align: center;
     display: flex;
     flex-direction: column;
