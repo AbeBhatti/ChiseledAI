@@ -1,0 +1,111 @@
+:root {
+    --neon-purple: #a855f7;
+    --neon-purple-soft: #c084fc;
+    --neon-purple-dim: rgba(168, 85, 247, 0.35);
+  }
+  
+  .exercise-selector {
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-140px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .selector-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  
+  .section-container {
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow:
+      0 0 6px rgba(168, 85, 247, 0.6),
+      0 0 20px rgba(168, 85, 247, 0.35);
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    color: #9b9bb0;
+    margin-bottom: 40px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .exercise-card {
+    background: rgba(10, 10, 16, 0.85);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 22px;
+    padding: 40px 30px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.15),
+      0 10px 40px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .exercise-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(20, 20, 32, 0.95);
+    border-color: var(--neon-purple);
+    box-shadow:
+      0 0 12px rgba(168, 85, 247, 0.55),
+      0 0 30px rgba(168, 85, 247, 0.25);
+  }
+  
+  .game-card {
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    background: rgba(15, 10, 25, 0.9);
+  }
+  
+  .game-card:hover {
+    border-color: var(--neon-purple-soft);
+    box-shadow:
+      0 0 16px rgba(168, 85, 247, 0.7),
+      0 0 40px rgba(168, 85, 247, 0.3);
+  }
+  
+  .exercise-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(168, 85, 247, 0.4);
+  }
+  
+  .exercise-description {
+    font-size: 1rem;
+    color: #a1a1b5;
+  }
+  
+  @media (max-width: 768px) {
+    .exercise-grid {
+      grid-template-columns: 1fr;
+    }
+  }

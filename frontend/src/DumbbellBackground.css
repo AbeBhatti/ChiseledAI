@@ -1,0 +1,49 @@
+:root {
+    --neon-purple: #a855f7;
+    --neon-purple-dim: rgba(168, 85, 247, 0.15);
+  }
+  
+  .dumbbell-background {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .dumbbell-container {
+    position: absolute;
+    inset: 0;
+    animation: scrollDown 12s linear infinite;
+  }
+  
+  .dumbbell {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    opacity: 0.09; 
+    transform: rotate(45deg);
+  
+    filter:
+      sepia(0.6)
+      hue-rotate(270deg)
+      saturate(2.2)
+      brightness(0.95)
+      contrast(1.25)
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.25))
+      drop-shadow(0 0 28px rgba(168, 85, 247, 0.18));
+  }
+  
+  
+  
+  @keyframes scrollDown {
+    from {
+      transform: translateY(-120px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

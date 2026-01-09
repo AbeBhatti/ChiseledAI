@@ -1,0 +1,93 @@
+.position-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .position-bar {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .bar-track {
+    position: relative;
+    width: 40px;
+    height: 300px;
+    background: #2c2c2e;
+    border-radius: 20px;
+    border: 2px solid #3a3a3c;
+    overflow: hidden;
+  }
+  
+  .target-zone {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: rgba(48, 209, 88, 0.2);
+    border: 2px dashed rgba(48, 209, 88, 0.5);
+  }
+  
+  .target-zone.top-zone {
+    top: 10px;
+  }
+  
+  .target-zone.bottom-zone {
+    bottom: 10px;
+  }
+  
+  .position-indicator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    transition: bottom 0.1s ease-out;
+    z-index: 2;
+  }
+  
+  .indicator-dot {
+    width: 100%;
+    height: 100%;
+    background: #30d158;
+    border-radius: 50%;
+    border: 4px solid #000;
+    box-shadow: 0 0 20px rgba(48, 209, 88, 0.6);
+    animation: pulse 1s infinite;
+  }
+  
+  .position-indicator.down .indicator-dot {
+    background: #ff9f0a;
+    box-shadow: 0 0 20px rgba(255, 159, 10, 0.6);
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .bar-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #8e8e93;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .position-feedback {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #30d158;
+    text-align: center;
+    min-height: 30px;
+  }

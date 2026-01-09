@@ -1,0 +1,130 @@
+:root {
+    --neon-purple: #a855f7;
+    --neon-purple-soft: #c084fc;
+    --neon-purple-dim: rgba(168, 85, 247, 0.35);
+  }
+  
+  .countdown-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .countdown-cancel {
+    position: absolute;
+    top: -130px;
+    left: 0px;
+    background: rgba(28, 28, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid #3a3a3c;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .countdown-cancel:hover {
+    background: #2c2c2e;
+    transform: translateY(-2px);
+  }
+  
+  .countdown-content {
+    text-align: center;
+  }
+  
+  .countdown-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--neon-purple);
+    animation: slideDown 0.5s ease;
+    text-shadow: 0 0 8px var(--neon-purple);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .countdown-circle {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 40px;
+    background: #1c1c1e;
+    border: 4px solid var(--neon-purple);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1s infinite, scaleIn 0.5s ease;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 var(--neon-purple-dim);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 30px rgba(168, 85, 247, 0);
+    }
+  }
+  
+  .countdown-number {
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--neon-purple);
+    animation: numberChange 0.3s ease;
+    text-shadow: 0 0 12px var(--neon-purple);
+  }
+  
+  @keyframes numberChange {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+.countdown-instruction {
+    font-size: 1.3rem;
+    color: #8e8e93;
+    animation: fadeInLower 1s ease 0.5s both;
+  }
+  
+  @keyframes fadeInLower {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+  }
+  
