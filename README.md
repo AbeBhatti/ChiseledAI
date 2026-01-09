@@ -15,7 +15,7 @@ Form and movement feedback (using text to speech)
 Web-based interface
 
 Tech Stack:
-Python, Flask, OpenCV, MediaPipe, React
+Python, Flask, OpenCV, MediaPipe, React (JavaScript/HTML/CSS)
 
 How It Works
 
